@@ -7,7 +7,7 @@ Met à jour les paramètres composante par composante (coordonnée par coordonn�
 
 import time
 import numpy as np
-from base import SamplerResult
+from .base import SamplerResult
 
 class ABCGibbsSampler:
     """

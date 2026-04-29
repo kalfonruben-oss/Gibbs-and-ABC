@@ -6,7 +6,7 @@ Implémentation de l'algorithme ABC par rejet standard.
 
 import time
 import numpy as np
-from base import SamplerResult
+from .base import SamplerResult
 
 class ABCRejectSampler:
     """
