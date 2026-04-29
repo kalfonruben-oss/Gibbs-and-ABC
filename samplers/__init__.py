@@ -7,4 +7,4 @@ Les trois algorithmes à comparer :
   - abc_gibbs   : ABC-Gibbs (Clarté et al.)
 """
 
-from samplers.base import SamplerResult
+from .base import SamplerResult
