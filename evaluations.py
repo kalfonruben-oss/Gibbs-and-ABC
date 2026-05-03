@@ -1,5 +1,5 @@
 """
-evaluation.py
+evaluations.py
 -------------
 Fonctions pour évaluer et comparer les performances des différents échantillonneurs,
 comme demandé dans les consignes : temps CPU, erreur inférentielle, erreur Monte Carlo.

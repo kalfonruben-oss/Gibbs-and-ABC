@@ -20,9 +20,6 @@ pas. Trop bas → la chaîne rejette trop et reste bloquée.
 import time
 import numpy as np
 from tqdm import trange
-import sys
-import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
 from .base import SamplerResult
 import ma_model
