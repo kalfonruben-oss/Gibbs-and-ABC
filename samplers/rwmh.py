@@ -20,12 +20,11 @@ pas. Trop bas → la chaîne rejette trop et reste bloquée.
 import time
 import numpy as np
 from tqdm import trange
-
 import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from samplers.base import SamplerResult
+from .base import SamplerResult
 import ma_model
 
 
@@ -70,7 +69,7 @@ def run(y_obs, n_iter=50_000, proposal_scale=0.1, theta_init=None,
     n_accept = 0
     n_model_calls = 0
 
-    t0 = time.time()
+    t0 = time.process_time()
     iterator = trange(n_iter, desc="RWMH", disable=not show_progress)
 
     for i in iterator:
@@ -95,7 +94,7 @@ def run(y_obs, n_iter=50_000, proposal_scale=0.1, theta_init=None,
             rate = n_accept / (i + 1)
             iterator.set_postfix(accept=f"{rate:.1%}")
 
-    cpu_time = time.time() - t0
+    cpu_time = time.process_time() - t0
     accept_rate = n_accept / n_iter
 
     # Retirer le burn-in
